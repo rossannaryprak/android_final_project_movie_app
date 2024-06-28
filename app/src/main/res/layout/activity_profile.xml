@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/profile_detail"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            >
+
+            <Button
+                android:id="@+id/profileButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="30dp"
+                android:background="@drawable/baseline_arrow_white_ios_24">
+            </Button>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:scaleType="center"
+                        android:src="@drawable/mov9" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/variant" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Pupuler Movies"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/price"
+                android:gravity="center"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <View
+            android:layout_marginVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/variant" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Type Of Movies"
+                android:textSize="35sp"
+                android:textColor="@color/black"
+                />
+            <View
+                android:layout_width="55dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="50dp"
+                android:background="@color/primary" />
+        </RelativeLayout>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!-- First Card -->
+                    <RelativeLayout
+                        android:id="@+id/cardLayout3"
+                        android:layout_width="330dp"
+                        android:layout_height="420dp"
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:onClick="onCardClick"
+                        android:background="@drawable/card">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+                            <Button
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/heart"
+                                android:gravity="end" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="330dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/mov1"
+                                tools:ignore="MissingConstraints" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Handsome Guys"
+                                    android:textColor="@color/variant"
+                                    android:textSize="20dp" />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/variant"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Drama Movie 2020"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp" />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/price"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!-- Second Card -->
+                    <RelativeLayout
+                        android:layout_width="330dp"
+                        android:layout_height="420dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/heart"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="330dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/mov2"
+                                tools:ignore="MissingConstraints" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="pixelLab"
+                                    android:textColor="@color/variant"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/variant"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Action Movie"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/price"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!-- Third Card -->
+                    <RelativeLayout
+                        android:layout_width="330dp"
+                        android:layout_height="420dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/heart"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="330dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/mov3"
+                                tools:ignore="MissingConstraints" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="The Batman Movie"
+                                    android:textColor="@color/variant"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/variant"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Best Movie"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/price"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!-- forth Card -->
+                    <RelativeLayout
+                        android:layout_width="330dp"
+                        android:layout_height="420dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+                            <Button
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/heart"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="330dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/mov1"
+                                tools:ignore="MissingConstraints" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Fashion watch"
+                                    android:textColor="@color/variant"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/variant"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Shooting Movie"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/price"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!-- Item 1 -->
+                    <LinearLayout
+                        android:layout_width="367dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/carde"
+                        android:orientation="horizontal"
+                        tools:ignore="UselessParent">
+                        <!-- Your item content here -->
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/demon" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="5dp"
+                                android:text="Drama"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="New #Modle"
+                                android:textColor="@color/variant"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="8dp"
+                            android:gravity="center"
+                            android:text="Follow"
+                            android:textColor="@color/accent"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            tools:ignore="RtlCompat" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="367dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/card"
+                        android:orientation="horizontal"
+                        tools:ignore="UselessParent">
+                        <!-- Your item content here -->
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/comedy" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="8dp"
+                                android:text="Comedy"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="New #Model"
+                                android:textColor="@color/variant"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="8dp"
+                            android:gravity="center"
+                            android:text="Follow"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            tools:ignore="RtlCompat" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="367dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/card"
+                        android:orientation="horizontal"
+                        tools:ignore="UselessParent">
+                        <!-- Your item content here -->
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/movie" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="8dp"
+                                android:text="Horror Movies"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="New #Model"
+                                android:textColor="@color/variant"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="8dp"
+                            android:gravity="center"
+                            android:text="Follow"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            tools:ignore="RtlCompat" />
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!-- First Card -->
+                    <RelativeLayout
+                        android:id="@+id/cardLayout1"
+                        android:layout_width="330dp"
+                        android:layout_height="420dp"
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:onClick="onCardClick"
+                        android:background="@drawable/card">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+                            <Button
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/heart"
+                                android:gravity="end" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="330dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/mov1"
+                                tools:ignore="MissingConstraints" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Handsome Guys"
+                                    android:textColor="@color/variant"
+                                    android:textSize="20dp" />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/variant"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Drama Movie 2020"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp" />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/price"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!-- Second Card -->
+                    <RelativeLayout
+                        android:layout_width="330dp"
+                        android:layout_height="420dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/heart"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="330dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/mov2"
+                                tools:ignore="MissingConstraints" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="pixelLab"
+                                    android:textColor="@color/variant"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/variant"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Action Movie"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/price"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!-- Third Card -->
+                    <RelativeLayout
+                        android:layout_width="330dp"
+                        android:layout_height="420dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/heart"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="330dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/mov3"
+                                tools:ignore="MissingConstraints" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="The Batman Movie"
+                                    android:textColor="@color/variant"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/variant"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Best Movie"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/price"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!-- forth Card -->
+                    <RelativeLayout
+                        android:layout_width="330dp"
+                        android:layout_height="420dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+                            <Button
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/heart"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="330dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/mov1"
+                                tools:ignore="MissingConstraints" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Fashion watch"
+                                    android:textColor="@color/variant"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/variant"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Shooting Movie"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/price"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
